@@ -2,7 +2,7 @@ import { MainCover } from "./main-cover"
 
 export const MainSection = () => {
     return(
-        <section className="h-screen bg-white/20 flex flex-col justify-center md:items-center md:justify-normal md:flex-row">
+        <section className="h-screen bg-gradient-to-b from-white/30 from-50% via-[#e5fbf6]/50 via-75% to-[#e5fbf6] to-100% flex flex-col justify-center md:items-center md:justify-normal md:flex-row">
         <MainCover />
         <div className="z-10 flex flex-col justify-center items-center p-5 sm:items-start md:px-10 text-white gap-3">
           <h1 className="text-6xl w-full md:text-6xl lg:text-[5.5rem] font-bold font-primary text-center sm:text-left">Psico Neuro Espiritual</h1>

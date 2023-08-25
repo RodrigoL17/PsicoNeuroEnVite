@@ -1,12 +1,12 @@
 import { IconCaretDownFilled } from "@tabler/icons-react";
-import { useContext, useState } from "react";
+import { useContext, useState, type FC, } from "react";
 import { ViewportContext } from "./viewport-context";
 import { ServicesLinks } from "./desktop/services-link";
 
 interface Props {
   isActive?: boolean;
 }
-export const Nav: React.FC<Props> = ({ isActive }) => {
+export const Nav: FC<Props> = ({ isActive }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { width } = useContext(ViewportContext);
 
