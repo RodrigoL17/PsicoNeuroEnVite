@@ -1,13 +1,12 @@
-import Header from "./components/header.tsx";
-import { MainSection } from "./components/main-section.tsx";
-import { ReviewsSection } from "./components/reviews-section.tsx";
-import { ServiceSection } from "./components/services-section.tsx";
+
+import { MainSection } from "../components/main-section.tsx";
+import { ReviewsSection } from "../components/reviews-section.tsx";
+import { ServiceSection } from "../components/services-section.tsx";
 
 
-function App() {
+export const Home = () => {
   return (
     <>
-      <Header />
       <MainSection />
       <section className="h-screen bg-gradient-to-b from-[#e5fbf6] to-[#fef7ff] border-b solid border-black">
         Profesionales
@@ -19,9 +18,11 @@ function App() {
       </section>
       <section className="h-screen bg-gradient-to-b from-[#e5fbf6] to-[#fef7ff] border-b solid border-black">
         contacto
+      
       </section>
     </>
   );
 }
 
-export default App;
+
+

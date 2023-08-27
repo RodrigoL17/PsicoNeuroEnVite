@@ -1,7 +1,8 @@
 import { IconCaretDownFilled } from "@tabler/icons-react";
-import { useContext, useState, type FC, } from "react";
-import { ViewportContext } from "./viewport-context";
+import { useContext, useState, type FC } from "react";
+import { ViewportContext } from "../contexts/viewport-context";
 import { ServicesLinks } from "./desktop/services-link";
+import { NavLink} from "react-router-dom";
 
 interface Props {
   isActive?: boolean;
@@ -12,7 +13,7 @@ export const Nav: FC<Props> = ({ isActive }) => {
 
   const handleHoverEnter = () => {
     setIsHovered(true);
-  }
+  };
 
   const handleHoverExit = () => {
     setIsHovered(false);
@@ -20,8 +21,7 @@ export const Nav: FC<Props> = ({ isActive }) => {
 
   const handleClickTablet = () => {
     setIsHovered(!isHovered);
-  }
-  
+  };
 
   return (
     <>
@@ -30,14 +30,28 @@ export const Nav: FC<Props> = ({ isActive }) => {
           isActive ? `translate-y-0` : `-translate-y-[11rem]`
         } md:flex-row md:static md:w-auto md:bg-transparent md:text-lg font-semibold`}
       >
-        <a href="">Nosotros</a>
-        <div className="flex items-center gap-1" onMouseLeave={handleHoverExit} onMouseEnter={handleHoverEnter}>
-          Servicios
-          {width >= 640 ? <IconCaretDownFilled className="h-5 w-5" onClick={handleClickTablet}/> : null}
-          {width >= 640 && isHovered && <ServicesLinks handleHover={handleHoverExit}/> }
+        <NavLink to="/about">Nosotros</NavLink>
+        <div
+          className="flex items-center gap-1"
+          onMouseLeave={handleHoverExit}
+          onMouseEnter={handleHoverEnter}
+        >
+          <NavLink to="/services" onMouseEnter={handleHoverEnter}>
+            Servicios
+          </NavLink>
+          {width >= 640 ? (
+            <IconCaretDownFilled
+              className="h-5 w-5"
+              onMouseEnter={handleHoverEnter}
+              onClick={handleClickTablet}
+            />
+          ) : null}
+          {width >= 640 && isHovered && (
+            <ServicesLinks handleHover={handleHoverExit} />
+          )}
         </div>
-        <a href="">Blog</a>
-        <a href="">Contacto</a>
+        <NavLink to="/blog">Blog</NavLink>
+        <NavLink to="/contact">Contacto</NavLink>
       </nav>
     </>
   );
