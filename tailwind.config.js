@@ -11,11 +11,11 @@ export default withMT({
   ],
   theme: {
     extend: {
-      fontFamily:{
-        "primary": ["Alegreya Sans SC"],
-        "secondary": ["Josefin Slab"]
-      }
+      fontFamily: {
+        primary: ["Alegreya Sans SC"],
+        secondary: ["Josefin Slab"],
+      },
     },
   },
-  plugins: [require('@tailwindcss/line-clamp')],
+  plugins: [require("@tailwindcss/line-clamp")],
 });

@@ -9,9 +9,11 @@ export const RatingStars: React.FC<Props> = ({ rating }) => {
 
   for (let i = 0; i < 5; i++) {
     if (i < rating) {
-      Stars.push(<IconStarFilled className="text-yellow-300 h-4 w-4" key={i}/>);
+      Stars.push(
+        <IconStarFilled className="text-yellow-300 h-4 w-4" key={i} />
+      );
     } else {
-      Stars.push(<IconStarFilled className="text-gray-300 h-4 w-4" key={i}/>);
+      Stars.push(<IconStarFilled className="text-gray-300 h-4 w-4" key={i} />);
     }
   }
 

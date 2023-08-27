@@ -14,7 +14,11 @@ interface Props {
 
 export const ReviewCard: React.FC<Props> = ({ review }) => {
   return (
-    <Card color="transparent" shadow={false} className="w-full px-20 h-full flex justify-center">
+    <Card
+      color="transparent"
+      shadow={false}
+      className="w-full px-20 h-full flex justify-center"
+    >
       <div className="bg-white rounded-md p-6">
         <CardHeader
           color="transparent"

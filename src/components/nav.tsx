@@ -2,7 +2,7 @@ import { IconCaretDownFilled } from "@tabler/icons-react";
 import { useContext, useState, type FC } from "react";
 import { ViewportContext } from "../contexts/viewport-context";
 import { ServicesLinks } from "./desktop/services-link";
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 interface Props {
   isActive?: boolean;

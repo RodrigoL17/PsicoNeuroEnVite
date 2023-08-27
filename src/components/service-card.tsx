@@ -13,16 +13,23 @@ export const ServiceCard: React.FC<Service> = ({
   description,
   duration,
   mode,
-  max_duration
+  max_duration,
 }) => {
   return (
     <div className="flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-2xl min-w-full">
       <CardBody>
-        <img src={img_src} alt={`Representation of ${title}`} className="mb-4 w-20 h-20" />
-        <Typography color="blue-gray" className="mb-2 font-primary font-extrabold text-2xl">
+        <img
+          src={img_src}
+          alt={`Representation of ${title}`}
+          className="mb-4 w-20 h-20"
+        />
+        <Typography
+          color="blue-gray"
+          className="mb-2 font-primary font-extrabold text-2xl"
+        >
           {title}
         </Typography>
-          <p className="line-clamp-3">{description}</p>
+        <p className="line-clamp-3">{description}</p>
       </CardBody>
       <CardFooter className="pt-0">
         <a href="#" className="inline-block">
