@@ -6,11 +6,12 @@ import { RouterProvider } from "react-router-dom";
 import { ViewportProvider } from "./contexts/viewport-context";
 import { ThemeProvider } from "@material-tailwind/react";
 
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider>
       <ViewportProvider>
-        <RouterProvider router={router} />
+          <RouterProvider router={router} />
       </ViewportProvider>
     </ThemeProvider>
   </React.StrictMode>

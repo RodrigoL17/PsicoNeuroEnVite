@@ -12,6 +12,7 @@ export interface Servicio {
   description: string;
   duration: number;
   max_duration?: number;
+  url_path: string;
   mode: string;
 }
 

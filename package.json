@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.3.36",
+    "@googlemaps/js-api-loader": "^1.16.2",
     "@material-tailwind/react": "2.1.1",
     "@tabler/icons-react": "2.32.0",
     "@tailwindcss/line-clamp": "0.4.4",

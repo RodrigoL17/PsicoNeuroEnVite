@@ -5,15 +5,15 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-import { type Servicio as Service } from "../types";
+import {Link} from "react-router-dom"
 
-export const ServiceCard: React.FC<Service> = ({
+import { type Servicio } from "../types";
+
+export const ServiceCard: React.FC<Servicio> = ({
   title,
   img_src,
   description,
-  duration,
-  mode,
-  max_duration,
+  url_path,
 }) => {
   return (
     <div className="flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-2xl min-w-full">
@@ -32,7 +32,7 @@ export const ServiceCard: React.FC<Service> = ({
         <p className="line-clamp-3">{description}</p>
       </CardBody>
       <CardFooter className="pt-0">
-        <a href="#" className="inline-block">
+        <Link to={`/${url_path}`} className="inline-block">
           <Button size="sm" variant="text" className="flex items-center gap-2">
             Más Información
             <svg
@@ -50,7 +50,7 @@ export const ServiceCard: React.FC<Service> = ({
               />
             </svg>
           </Button>
-        </a>
+        </Link>
       </CardFooter>
     </div>
   );

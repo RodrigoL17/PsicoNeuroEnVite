@@ -16,6 +16,7 @@ export const ServiceSection = () => {
             duration={serv.duration}
             mode={serv.mode}
             max_duration={serv.max_duration}
+            url_path={serv.url_path}
           />
         ))}
       </div>
