@@ -15,6 +15,7 @@ export const ServiceCard: React.FC<Servicio> = ({
   description,
   url_path,
 }) => {
+ 
   return (
     <div className="flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-2xl min-w-full">
       <CardBody>
@@ -25,7 +26,7 @@ export const ServiceCard: React.FC<Servicio> = ({
         />
         <Typography
           color="blue-gray"
-          className="mb-2 font-primary font-extrabold text-2xl"
+          className="mb-2 font-primary font-extrabold text-2xl min-h-[64px]"
         >
           {title}
         </Typography>
@@ -52,6 +53,7 @@ export const ServiceCard: React.FC<Servicio> = ({
           </Button>
         </Link>
       </CardFooter>
+
     </div>
   );
 };
