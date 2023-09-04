@@ -8,7 +8,6 @@ import { ErrorPage } from "../pages/error-page";
 import { About } from "../pages/about";
 import { Services } from "../pages/services";
 import { Blog } from "../pages/blog";
-import { PsicoterapiaPage } from "../pages/piscoterapia";
 
 export const router = createBrowserRouter([
   {
@@ -37,9 +36,5 @@ export const router = createBrowserRouter([
         element: <Blog />,
       },
     ],
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
-  },
+  }
 ]);
